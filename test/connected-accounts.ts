@@ -4,18 +4,18 @@ import chaiAsPromised from "chai-as-promised";
 import { Contract } from "ethers";
 use(chaiAsPromised);
 
-describe("ConnectedAccount", function () {
+describe("ConnectedAccounts", function () {
   let accountAddress: string;
   let contract: Contract;
 
   beforeEach(async function () {
     const [acc1] = await ethers.getSigners();
 
-    const ConnectedAccount = await ethers.getContractFactory(
-      "ConnectedAccount",
+    const ConnectedAccounts = await ethers.getContractFactory(
+      "ConnectedAccounts",
       acc1
     );
-    const deploy = await ConnectedAccount.deploy();
+    const deploy = await ConnectedAccounts.deploy();
     await deploy.deployed();
 
     accountAddress = acc1.address;

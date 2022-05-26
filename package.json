@@ -1,0 +1,33 @@
+{
+  "name": "hardhat-project",
+  "scripts": {
+    "node": "hardhat node",
+    "help": "hardhat --help",
+    "test": "hardhat test",
+    "build": "hardhat compile",
+    "deploy:listings:goerli": "hardhat run scripts/deploy-listings.js --network goerli",
+    "deploy:merge:goerli": "hardhat run scripts/deploy-merge.js --network goerli",
+    "size": "hardhat size-contracts"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.6",
+    "@nomiclabs/hardhat-etherscan": "^3.0.3",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@typechain/hardhat": "^6.0.0",
+    "@types/chai": "^4.3.1",
+    "@types/chai-as-promised": "^7.1.5",
+    "@types/dotenv": "^8.2.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^17.0.35",
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
+    "dotenv": "^16.0.1",
+    "ethereum-waffle": "^3.4.4",
+    "ethers": "^5.6.8",
+    "hardhat-contract-sizer": "^2.5.1",
+    "hardhat-gas-reporter": "^1.0.8",
+    "solidity-coverage": "^0.7.21",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2"
+  }
+}

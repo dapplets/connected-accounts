@@ -3,7 +3,33 @@ pragma solidity ^0.8.13;
 
 import "hardhat/console.sol";
 
-contract ConnectedAccounts {
+contract ConnectedAccountsSave {
+    constructor() {
+        // Создание тестовых аккаунтов
+        accounts.push(Account(1, "id_name_1", "dmiltas", 1, 1));
+        accounts.push(Account(2, "id_name_2", "reilgelrn", 2, 1));
+        accounts.push(Account(3, "id_name_3", "deokneks", 2, 1));
+        accounts.push(Account(4, "id_name_4", "kaizda", 3, 1));
+        accounts.push(Account(5, "id_name_5", "straid", 3, 1));
+        accounts.push(Account(6, "id_name_6", "trains", 3, 1));
+
+        // Происхождение (откуда аккаунт присоеденился к нам)
+        // В account.push -- это 4 аргумент
+        origins.push(Origin("Twitter")); // 1
+        origins.push(Origin("Instagram")); // 2
+        origins.push(Origin("Gmail.com")); // 3
+
+        // ASN -- это например с первого ко второму
+        // ALN -- counter (1,2,3,4,5). Upper with everyone element
+        // Name -- account display name. Example name Daniil (my name in Twitter)
+        // Origin Id -- id from where the account decided to connect. Example, Twitter, Gmail
+        // Status -- status (1 - active, 2 - progress)
+        links.push(AccountLink(2, 1, 1, 0));
+        links.push(AccountLink(2, 2, 1, 0));
+        links.push(AccountLink(3, 3, 1, 0));
+        links.push(AccountLink(4, 4, 1, 0));
+    }
+
     // **************
     // Structs
     // **************

@@ -15,7 +15,7 @@ async function main() {
 
   // We get the contract to deploy
   const ConnectedAccounts = await ethers.getContractFactory(
-    "ConnectedAccounts"
+    "ConnectedAccountsTest",
   );
   const connected = await ConnectedAccounts.deploy();
 
